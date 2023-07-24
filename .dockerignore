@@ -13,8 +13,9 @@
 .travis.yml
 
 #Tests
-spec/
+#spec/
 
+db-data/
 
 #tmp
 tmp/
@@ -30,7 +31,7 @@ Dockerfile*
 
 #package
 package*.json
-
+.env
 
 #deploy
 deploy/
@@ -44,7 +45,3 @@ env-example.txt
 Thumbs.db
 
 postgresql/
-data/
-solr_data/
-db-data/
-!db-data/.keep
