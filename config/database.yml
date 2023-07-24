@@ -9,20 +9,18 @@
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
+
 default: &default
   adapter: mysql2
-  encoding: utf8mb4
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: <%= ENV['MYSQL_DATABASE'] %>
-  host: <%= ENV['MYSQL_SERVER'] %>
-  port: <%= ENV['MYSQL_PORT'] || 3306 %>
   username: <%= ENV['MYSQL_USER'] %>
+  port: <%= ENV['MYSQL_PORT'] %>
+  database: <%= ENV['MYSQL_DB'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
-  socket: /tmp/mysql.sock
+  host: <%= ENV['MYSQL_HOST'] %>
+  ssl_mode: disabled
 
 development:
   <<: *default
-  database: umass_geoblacklight_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

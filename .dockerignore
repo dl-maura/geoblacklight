@@ -1,0 +1,50 @@
+# Configs
+*.env*
+*.pem
+
+# Logs
+*.log
+
+# IDEs and editors
+.project
+.classpath
+*.launch
+.settings/
+.travis.yml
+
+#Tests
+spec/
+
+
+#tmp
+tmp/
+
+#Docs
+docs/
+CONTRIBUTING.md
+README.md
+
+#Docker files
+docker-compose*.yml
+Dockerfile*
+
+#package
+package*.json
+
+
+#deploy
+deploy/
+
+Gemfile.lock
+
+env-example.txt
+
+# System Files
+.DS_Store
+Thumbs.db
+
+postgresql/
+data/
+solr_data/
+db-data/
+!db-data/.keep
