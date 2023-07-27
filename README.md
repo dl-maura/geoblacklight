@@ -112,3 +112,5 @@ Index just the UMass test fixtures
 ```bash
 bundle exec rake rake umass:index:umass
 ```
+
+### Docker Setup
