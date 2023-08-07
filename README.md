@@ -114,3 +114,51 @@ bundle exec rake rake umass:index:umass
 ```
 
 ### Docker Setup
+
+# CURIOSity
+
+CURIOSity enables researchers to discover and easily access a wealth of curated, publicly accessible, digitized materials.
+
+## Technology Stack
+
+##### Language
+
+Ruby on Rails
+
+##### Framework
+
+Blacklight / Spotlight
+
+## Running the stack
+
+### Important URLs
+
+dev: https://localhost:21407/
+
+## Local Development Environment Setup Instructions
+
+### 1. Clone the project
+
+```bash
+git clone git@github.com:harvard-lts/CURIOSity.git
+```
+
+### 2: Create app environment variables
+
+##### Create config file for environment variables
+
+- Make a copy of the config example file `./env-example.txt`
+- Rename the file to `.env`
+- Replace placeholder values as necessary
+
+_Note: The config file .env is specifically excluded in .gitignore and .dockerignore, since it contains credentials it should NOT ever be committed to any repository._
+
+### 3. Build the Docker image(s)
+
+`docker compose build`
+
+### 4. Build the Docker image(s) and bring up the stack
+
+`docker compose -f docker-compose.yml up -d --build --force-recreate`
+
+After running the above commands, check that you see the following output in the terminal, then navigate to http://localhost:21800 -- solr and the database may take a few minutes to start up on your first run, so you may need to restart the stack after your initial db creation.
